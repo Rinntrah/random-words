@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- ... -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="styles.css" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+
+    <body id="songs">
+	
+
+<div class="container md:mx-auto  md:px-8 max-w-screen-md 
+             px-2"> 
+
+            <div class="ramkaGlowna border-gray-200 border-2 pb-4 mt-14 rounded-xl"> 
+                <div class="sygnatura text-gray-300 -m-4 text-center text-lg  tracking-widest"> Michael Joyce: Twilight. A Symphony</div> 
+
+                <!-- main frame   -->
+                <div id="container" class="relative bg-white bg-opacity-90 rounded-xl 
+                     md:pl-20 md:pr-18 md:pb-5 md:mb-4 md:mt-12 md:mx-2 md:pt-0
+                     pl-4 pr-3 pb-4 mb-3 mt-12 mx-2 pt-0" > <!-- text screen and mobile settings: margin padding etc -->
+                    <!-- start content  -->
+
+
+                    <div>
+                      <section class="leksja font-serif text-gray-900 text-base tracking-wide text-left md:leading-7">	  
+
+
+                            <h1 class="text-zmrokGRAY-lighter font-sans tracking-widest mb-6 pb-0 text-2xl pt-3 -ml-2.5">/transubstantiate</h1>
+
+                            <section  class="quote" id="neat">
+							 <p>(January, pine boughs fall from the weight of snow in a soft, huffing collapse: “objects are portions of arrested happening” —George Kubler)</p>
+							 <p>My father saved the cookies from her last Christmas in a desk drawer, hoarding them as if to keep her whole: sugar-frosted crimson wreaths dotted with metallic silver candy orbs but even so fading to pink. I wonder if he fed on them as if they were the consecrated host, fruit of the fields, the work of human hands. In any case he did them better service than the rest of us who, discovering them in the drawer after his death, lacquered them and preserved them as fetish ornaments. </p>
+							 <p>We have lost our religion. Somewhere I have a crumpled ball of paper napkin containing shards of bread crust and a dust of cheese swept up from a table in embarrassment and entombed there. The paper is quite grey by now but the contents are surprisingly fresh. They cling to the fingertip if you touch them and have to be brushed off, like dander. I wonder what they would taste like.</p>
+							When we were children we knew the system of relics. First class was bone, hair or other body part of a saint or virgin; second class the cloak or handkerchief; third class was something the holy one had touched.
+							 <p>“Hair, body hair, nails, teeth, skin; skin, teeth, nails, body hair, hair. They can also be meditated upon as dead, for all the outsides and the ends of these five parts are dead, so that what gives rise to pride in our own body or lust for that of others is dead.” Bhikku Khantipalo</p> 
+							 Nos habebit humus.<br>Nos habebit humus.
+							</section>
+                    </div>
+
+
+
+
+                </div>
+                <!-- END TEXT -->
+
+
+                <!-- toolbar start  -->
+                    <ul class="flex justify-center space-x-8">
+					<button type="button" class="btn btn-primary btn-lg" onClick="hlRandomWord()"> Highlight random word </button>
+
+                    <!-- END TOOLBAR:  -->
+
+
+                    <!-- map modal start, with semi-transp background at full w and h  -->
+                    <div id="MAP_WINDOW_DIV" class="hidden modal inset-0 bg-gray-800 bg-opacity-90 flex justify-center items-center ">
+
+
+                        <div class="modal-content relative bg-zmrokMODALlighter w-2/3 md:w-2/3 lg:w-1/2 py-2 px-3 rounded-xl opacity-95">
+                            <!-- TYTUŁ MAPS-->
+                            <div class="text-center font-modal-sans">
+    <h4 class="font-modal-sans text-gray-900 italic font-extrabold mt-8 pb-5 tracking-wide text-2xl">MAPS</h4>    
+                            </div>
+
+
+                            <!-- SVG ZAWIERAJĄCE HIERARCHY-->
+                            <div id="MAP-HIERARCHY" class="tabcontent" style="height:92%">
+                                <!--<h3>MAP-HIERARCHY</h3> !-->
+
+                                     <div class="visualNavigation flex">
+								
+                                    <div class="flex mx-auto">
+                                        <div><button id="HIER_GO_BACK_BTN" class="tablinks tabButtonInMapWindow font-modal-sans border-zmrokNAVY-dark text-zmrokGRAY-dark  uppercase tracking-wide text-sm mt-2 mb-2" 
+                                            onclick="hier_go_BACK()"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-zmrokMODAL-Zoom" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
+                                              </svg></button></div>
+                                        <div> <button id="HIER_GO_UP_BTN" class="tablinks tabButtonInMapWindow font-modal-sans border-zmrokNAVY-dark text-zmrokGRAY-dark uppercase tracking-wide text-sm mt-2 mb-2" 
+                                            onclick="hier_go_UP()"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-zmrokMODAL-Zoom" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" />
+                                            </svg></button></div>
+                                
+                                      </div>
+
+                                
+
+                                
+                                     <!-- PRZYCISK – idź w dół hierarchii MP zmienił na HIER_GO_DOWN_BTN
+
+
+                                      <button id="HIER_GO_DOWN_BTN" class="tablinks tabButtonInMapWindow font-modal-sans border-zmrokNAVY-dark text-zmrokGRAY-dark hover:bg-zmrokGRAY-lighter uppercase tracking-wide text-sm mt-2 mb-2" 
+                                      onclick="hier_go_DOWN()"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-zmrokMODAL-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" />
+                                      </svg></button>
+									  -->
+                                    </div>
+
+                                                                <svg class="bg-zmrokMODALlighter w-full svg-with-hierarchy-or-inbound-outbound font-modal-sans italic tracking-wide text-twLexiaTitle" id="MAP_SVG_HIERARCHY"></svg>
+
+                            </div>
+
+
+                            <!-- SVG ZAWIERAJĄCE IO-->
+                            <div id="MAP-INBOUND-OUTBOUND" class="tabcontent hidden">
+                                <!--  <h3>MAP-INBOUND-OUTBOUND</h3> !-->
+                                <svg class="bg-zmrokMODALlighter w-full svg-with-hierarchy-or-inbound-outbound font-modal-sans italic tracking-wide text-twLexiaTitle" id="MAP_SVG"></svg>
+                            </div>
+
+
+
+                            <!-- Close modal button -->
+                            <div class="absolute top-0.5 right-0 flex justify-end items-center w-100 p-3">
+                                <button class="rounded-full h-12 w-12 px-3 py-1 border-2 border-double bg-zmrokMODALlighter border-zmrokMODAL-dark text-zmrokGRAY-dark hover:bg-zmrokGRAY-lighter uppercase text-xsclose-modal"
+                                        id="MAP_WINDOW_CLOSE_BUTTON">
+                                    <svg class="close-modal cursor-pointer"
+                                         fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                          clip-rule="evenodd">
+                                    </path>
+                                    </svg>
+                                </button>
+                            </div> 
+
+
+                            <!-- Buttons to select map type-->
+                            <div class="ramka bg-zmrokMODALlighter">
+                                <div class="text-center font-modal-sans">
+
+
+                                    <div class="mt-0 text-center justify-center">
+                                        <button onclick="openMap(event, 'MAP-HIERARCHY')"
+                                                class="font-modal-sans px-3 py-1 border-2 border-double bg-zmrokMODALlighter border-zmrokNAVY-dark text-zmrokGRAY-dark hover:bg-zmrokGRAY-lighter rounded uppercase tracking-wide text-sm mt-2 mb-2">
+                                            Hierarchy map
+                                        </button>
+                                    </div>
+
+                                    <div class="mt-1 text-center justify-center">
+                                        <button onclick="openMap(event, 'MAP-INBOUND-OUTBOUND')"
+                                                class="font-modal-sans px-3 py-1 border-2 border-double bg-zmrokMODALlighter border-zmrokNAVY-dark text-zmrokGRAY-dark hover:bg-zmrokGRAY-lighter rounded uppercase tracking-wide text-sm mb-8">
+                                            Connections map
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>  
+                    </div>
+
+
+                    
+
+                    <!-- okno mapa koniec !-->
+                    <!-- modal "link menu"  -->
+                    <div class="hidden modal absolute inset-0 bg-gray-800 bg-opacity-60
+                         flex justify-center items-center"
+                         id="LinkWindowDiv">
+                        <!-- modal -->
+
+                        <div class="bg-zmrokMODALlighter w-2/3 md:w-2/3 lg:w-2/5 py-2 px-3 rounded-xl shadow-xl z-10 opacity-95">
+                            <div class="relative ramka border-zmrokMODAL-dark border-2 pb-4 m-0
+                                 rounded-xl">
+                                <!-- modal header -->
+                                <!-- modal body -->
+                                <div class="text-center font-modal-sans pt-3">
+
+                                    <h4 class="text-lg font-modal-sans
+                                        text-gray-900 italic font-extrabold mt-6 pb-5 tracking-wide">LINK MENU</h4>   
+                                    <div class="text-gray-700 mt-1 font-modal-sans">***</div>
+                                    <h5 class="text-lg font-modal-sans mb-6">See your paths and links:</h5>
+
+                                    <div class="w-full grid grid-cols-12 gap-0" id="LinkInOutDivs">
+                                         
+                                    </div>
+
+
+                                </div>
+
+                                <div class="p-3">
+
+
+                                    <div class="link-title w-full font-modal-sans">
+                                        <!-- 4E. MODAL – TREŚĆ  -->
+
+
+                                        <!-- 4F. MODAL –  TYTUŁY LINKÓW  -->
+
+
+                                        <ul id="<ul>_link-title">
+                                            <!--  <li class="bg-gray-100">A.Link title 1  "title element" </li> -->
+                                            <!--  <li class="bg-gray-300">B.Link title 1 "title element" </li> -->
+                                        </ul>
+                                    </div>
+
+                                    <div class="destination-title w-full flex-nowrap">
+                                        <ul id="<ul>_destination-title">
+                                            <!-- 4F. MODAL –  TYTUŁY SEGMENTÓW DOCELOWYCH  -->
+                                            <!--<li class="bg-red-900">C.Destination title 1 "rev-title" </li> -->
+                                            <!-- <li class="bg-gray-300">D.Destination title 2 "rev-title" </li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="absolute top-0 right-0 flex justify-end items-center w-100 p-3">
+                                    <button
+                                        class="rounded-full h-12 w-12 px-3 py-1 border-2 border-double bg-zmrokMODALlighter border-gray-800 text-gray-800 hover:bg-zmrokGRAY-lighter uppercase font-modal-sans text-xs close-modal"
+                                        onclick="return HideLinkListWindow();">
+                                        <svg onclick="return HideHistoryWindow();"
+                                             class="close-modal cursor-pointer"
+                                             fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                              clip-rule="evenodd">
+
+                                        </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="DEBUG_DIV">
+            Debug info: <br> Fragment path: <a id="DEBUG_FRAGMENT_PATH">...</a>
+            <br> HTML paths: <a id="DEBUG_FRAGMENT_PATHS"> </a> <br>
+            Additional: <a id="DEBUG_OTHER"></a> <br>
+
+            <div id="file_name">transubstantiate.html</div>
+            <div id="link_in">[LINK_IN]</div> 
+             <div id="link_out">[LINK_OUT]</div> 
+        </div>
+
+      
+        <script type="text/javascript" src="main2.js"></script>
+		
+        <script src="https://d3js.org/d3.v4.min.js" type="text/javascript"></script>
+        <script src="https://d3js.org/d3-selection-multi.v1.js"></script>
+     
+
+    </body>
+	
+
+</html>
