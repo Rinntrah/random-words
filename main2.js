@@ -32,8 +32,15 @@ function fClearAllHighlights (e) {
   });
 }
 
+var ILOSC_SLOW_PODSWIETLONYCH = 10;
+
+//funkcja wzywana po wcisnięciu przycisku Highlight
 function hlRandomWord(){
-  fClearAllHighlights(eQuote);
-  fHighlightRandomWord(eWords);
 	
+  fClearAllHighlights(eQuote);
+  
+  for( let i=0; i < ILOSC_SLOW_PODSWIETLONYCH;i++){
+	fHighlightRandomWord(eWords);
+  }
+  
 }
